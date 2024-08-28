@@ -1,0 +1,113 @@
+ 
+/* General Styles */
+body {
+  font-family: 'Courier New', Courier, monospace;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+/* Heading Style */
+.heading {
+  font-size: 35px;
+  font-weight: 800;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Main Container Style */
+.main {
+  border: 3px solid black;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  width: 90%;
+  max-width: 600px;
+  margin: 20px auto;
+  position: relative;
+  animation: borderColorChange 3s infinite;
+}
+
+/* Border Animation */
+@keyframes borderColorChange {
+  0% { border-color: black; }
+  50% { border-color: #007bff; }
+  100% { border-color: black; }
+}
+
+/* Input Style */
+.input {
+  padding: 10px;
+  border-radius: 6px;
+  font-weight: 700;
+  color: gray;
+  border: 1px solid gray;
+  width: calc(100% - 22px); /* Adjust width considering padding */
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.input:focus {
+  outline: none;
+  border: 2px solid rgba(0, 0, 0, 0.544);
+}
+
+/* Placeholder Style */
+.input::placeholder {
+  color: gray;
+  font-weight: 900;
+}
+
+/* Button Style */
+.button {
+  margin-left: 20px;
+  font-weight: 800;
+  margin-top: 6px;
+  color: black;
+  border-radius: 6px;
+  padding: 8px 20px;
+  border: 1px solid black;
+  background-color: white;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: rgba(0, 0, 0, 0.654);
+  color: white;
+}
+
+/* Tasks Style */
+.tasks {
+  font-weight: 900;
+  font-size: 23px;
+   
+  background-color: rgba(128, 128, 128, 0.505);
+  /* padding: 6px; */
+
+  
+  border-radius: 6px;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.tasks:hover {
+  background-color: rgba(128, 128, 128, 0.7);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .heading {
+    font-size: 28px;
+  }
+
+  .tasks {
+    font-size: 18px;
+  }
+
+  .button {
+    padding: 6px 15px;
+  }
+
+  .input {
+    width: calc(100% - 18px); /* Adjust width considering padding */
+  }
+}
